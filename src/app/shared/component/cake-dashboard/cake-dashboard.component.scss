@@ -1,0 +1,62 @@
+.cakeInfo {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("https://aksh31.github.io/TUC-Rose-and-Cake/assets/images/heroimg2.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+
+
+    .card {
+        height: 350px;
+        border: 1px solid #fff;
+        background-color: transparent;
+
+        .card-body {
+            .img-fluid {
+                height: 200px;
+                width: 100%;
+                object-fit: cover;
+            }
+        }
+    }
+}
+
+.navbar-light {
+    background-color: orange !important;
+
+    .navbar-nav {
+        .nav-item {
+            margin-right: 60px;
+
+            .nav-link {
+                font-size: 1.25rem;
+                font-weight: 700;
+                transition: all 0.3s ease-in-out;
+
+                @media all and (max-width:992px) {
+                    padding-left: 10px;
+                }
+
+                &:hover,
+                &:active,
+                &:focus {
+                    color: orange;
+                    background-color: #000;
+                    border-radius: 5px;
+                }
+            }
+        }
+    }
+
+    .form-inline {
+        @media all and (max-width:992px) {
+            width: 100%;
+        }
+
+        .form-control {
+            @media all and (max-width:992px) {
+                width: 100%;
+            }
+        }
+    }
+}

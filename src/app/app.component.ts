@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { Icakeshop } from './shared/models/Icakeshop';
+import { cakeArray } from './shared/component/constant/cake';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +9,6 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'tuc-cake-task';
+
+
 }

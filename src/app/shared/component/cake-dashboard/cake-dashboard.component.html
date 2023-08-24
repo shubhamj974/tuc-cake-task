@@ -1,0 +1,56 @@
+<header class="cakeHeader">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#">TUC Cake Shop</a>
+        <button class="navbar-toggler" appNavBarShowHide type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+            aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"> </span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" (click)="onAllItems('cake' , 'flowers' , 'pastry')" href="#">All <span
+                            class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" (click)="onItemData('cake')" href="#">Cakes</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" (click)="onItemData('flowers')" href="#">Flowers</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" (click)="onItemData('pastry')" href="#">Pastries</a>
+                </li>
+
+            </ul>
+            <div class="form-inline my-2 my-lg-0">
+                <input class="form-control mr-sm-2" [(ngModel)]="searchVal" type="search" placeholder="Search">
+            </div>
+        </div>
+    </nav>
+</header>
+<main>
+    <section class="cakeInfo py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 col-lg-3" *ngFor="let item of allItemArr | cakeFilter : searchVal">
+                    <div class="card mb-4">
+                        <div class="card-body p-0 p-2">
+                            <img class="img-fluid" [src]="item.img" alt="">
+                            <div class="cakePrice text-white">
+                                <h6 class="text-capitalize  mt-2">{{item.name}}</h6>
+                                <p>Rs. {{item.prize}} /-</p>
+                            </div>
+                            <div class="cardBtn d-flex justify-content-between">
+                                <button type="button" class="btn btn-primary btn-sm">Add to Cart</button>
+                                <button type="button" class="btn btn-warning btn-sm">Buy Now</button>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
